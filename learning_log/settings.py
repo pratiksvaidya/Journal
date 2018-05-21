@@ -61,7 +61,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'learning_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,7 +148,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Allow all host headers.
     ALLOWED_HOSTS = ['pv-journal.herokuapp.com']
     DEBUG = False
-    
+
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(__file__))
     STATIC_URL = '/static/'
